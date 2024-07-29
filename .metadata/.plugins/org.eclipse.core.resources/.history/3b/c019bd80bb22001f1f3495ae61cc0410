@@ -1,0 +1,30 @@
+package loginid.loginid;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+       
+    	
+    	System.out.print("Yes Work");
+		System.setProperty("webdriver.chrome.driver", "/eclips_workspace/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.id("inputUsername")).sendKeys("Miakhel");
+		driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademyy");
+		driver.findElement(By.className("signInBtn")).click();
+		System.out.print(driver.findElement(By.cssSelector("p.error")).getText());
+		driver.findElement(By.linkText("Forgot your password?")).click();
+		driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("Mia 1");
+		driver.findElement(By.xpath("//input[@placeholder='Email']")).sendKeys("khan@gmail.com");
+  
+    	    
+    }
+}

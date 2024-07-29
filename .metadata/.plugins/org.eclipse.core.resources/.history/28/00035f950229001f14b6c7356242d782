@@ -1,0 +1,34 @@
+package rahul.rahul;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World fff!" );
+        String name="Miakhel LoGin Sho";
+		System.out.println("ja");
+		System.setProperty("webdriver.chrome.driver", "/eclips_workspace/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.id("inputusername")).sendKeys(name);
+		driver.findElement(By.name("inputpassword")).sendKeys("rahulshettyacademy");
+		driver.findElement(By.className("signinbtn")).click();
+		Thread.sleep(2000);
+		System.out.println(driver.findElement(By.tagName("p")).getText());
+		Assert.assertEquals(driver.findElement(By.tagName("p")).getText(), "you are successfully logged in.");
+        Assert.assertEquals(driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText(), "Hall "+ name +",");
+    }
+}

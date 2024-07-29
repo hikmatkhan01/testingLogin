@@ -1,0 +1,24 @@
+package rahulFirst;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class AppClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.print("Yes Work");
+		System.setProperty("webdriver.chrome.driver", "/eclips_workspace/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://rahulshettyacademy.com/locatorspractice/");
+		driver.findElement(By.id("inputUsername")).sendKeys("Miakhel");
+		driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademyy");
+		driver.findElement(By.className("signInBtn")).click();
+		System.out.print(driver.findElement(By.cssSelector("p.error")).getText());
+
+	}
+
+}

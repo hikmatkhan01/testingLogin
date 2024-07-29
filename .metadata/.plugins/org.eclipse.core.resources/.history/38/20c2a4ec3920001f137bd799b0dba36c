@@ -1,0 +1,19 @@
+package java2intor;
+
+public class javaPrictice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub	
+		System.out.println("hallo bahi");
+		
+		
+		
+		int[] arr= {1,2,3,4,5};
+		System.out.print(arr[0]);
+		System.out.print(arr[1]);
+		System.out.print(arr[2]);
+		System.out.print(arr[3]);
+		System.out.print(arr[4]);
+	}
+
+}

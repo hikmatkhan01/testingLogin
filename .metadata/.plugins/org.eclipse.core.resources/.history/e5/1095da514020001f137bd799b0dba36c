@@ -1,0 +1,17 @@
+package java2intor;
+
+public class javaPrictice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub	
+		
+		
+        int[] arr= {1,2,3,6,8,9,10,122,55};	
+        for(int a=1; a<=arr.length;a++)
+        {
+        	System.out.print(arr[a]);
+        }
+	
+	}
+
+}

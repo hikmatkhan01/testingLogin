@@ -1,0 +1,17 @@
+package rahulFirst;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AppClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.print("Yes Work");
+		System.setProperty("chromedriver.chrome.driver", "/eclips_workspace/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+
+	}
+
+}

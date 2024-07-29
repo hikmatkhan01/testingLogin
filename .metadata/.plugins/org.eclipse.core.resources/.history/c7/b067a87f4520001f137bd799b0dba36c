@@ -1,0 +1,42 @@
+package java2intor;
+
+public class javaPrictice {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub	
+		
+		
+        int[] arr= {1,2,3,6,8,9,10,122,55};	
+        for(int a=0; a<=8;a++)
+        {
+        	if(arr[a] % 2 == 0)
+        	{
+        		System.out.print("divided by 2 = "+arr[a]+"\n");
+        	}	
+        	else
+        	{
+        		System.out.print("\n Not divided  "+arr[a]+"\n");	
+        	}
+        
+        	
+        }
+        
+  System.out.System.out.println("hallo");
+        
+        int[] numbers = {10,20,30,45,50};
+        
+        for(int i=0; i<=4; i++)
+        {
+            if(i==0)
+            {
+                System.out.println("first element of array "+ numbers[i])
+            }
+            if(i==numbers.length -1 )
+            {
+               System.out.println("Last t of array "+ numbers[i])
+            }
+        }
+	
+	}
+
+}
